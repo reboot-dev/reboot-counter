@@ -1,0 +1,9 @@
+protoc api/
+protoc --nodejs=api
+protoc --react=web/src/api
+
+dev run --name=counter
+dev run --watch=backend/**/*.ts
+dev run --tsc='npx tsc'
+dev run --nodejs
+dev run dist/backend/src/main.js
