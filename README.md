@@ -42,8 +42,6 @@ Running directly on a host requires:
 - A platform of either:
    - `x86_64 Linux` with `glibc>=2.35` (Ubuntu Jammy and other equivalent-generation Linux distributions)
    - `arm64 or x86_64 MacOS` with `MacOS>=13.0` and `Xcode>=14.3`
-- Python==3.10.
-   - If `python --version` does not report Python 3.10, you can use [Rye](https://rye-up.com/) to automatically fetch and manage Python 3.10 [in this directory](./.python-version).
 - Node.js
     - Including `npm`.
 - Docker
