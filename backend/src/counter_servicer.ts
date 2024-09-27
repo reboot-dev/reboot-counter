@@ -3,13 +3,13 @@ import {
   ReaderContext,
   TransactionContext,
   WriterContext,
-} from "@reboot-dev/resemble";
+} from "@reboot-dev/reboot";
 import { Counter as CounterMessage } from "../../api/counter/v1/counter_pb.js";
 import {
   Counter,
   TakeRequest,
   TakeResponse,
-} from "../../api/counter/v1/counter_rsm.js";
+} from "../../api/counter/v1/counter_rbt.js";
 
 export class CounterServicer extends Counter.Interface {
   constructor() {

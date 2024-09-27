@@ -1,7 +1,6 @@
 api/**/*.ts
-api/**/*.d.ts
-api/**/*.js
-web/src/api/**/*.ts
-web/src/api/**/*.d.ts
-web/src/api/**/*.js
-/dist/
+api/dist/
+web/lib/api/**/*.ts
+web/lib/api/**/*.d.ts
+web/lib/api/**/*.js
+dist/
