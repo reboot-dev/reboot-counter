@@ -3,27 +3,27 @@ syntax = "proto3";
 package counter.v1;
 
 import "google/protobuf/empty.proto";
-import "resemble/v1alpha1/options.proto";
+import "rbt/v1alpha1/options.proto";
 
 service CounterInterface {
   rpc Increment(google.protobuf.Empty) returns (google.protobuf.Empty) {
-    option (resemble.v1alpha1.method).writer = {
+    option (rbt.v1alpha1.method).writer = {
     };
   }
 
   rpc Count(google.protobuf.Empty) returns (Counter) {
-    option (resemble.v1alpha1.method).reader = {
+    option (rbt.v1alpha1.method).reader = {
     };
   }
 
   rpc Take(TakeRequest) returns (TakeResponse) {
-    option (resemble.v1alpha1.method).transaction = {
+    option (rbt.v1alpha1.method).transaction = {
     };
   }
 }
 
 message Counter {
-  option (resemble.v1alpha1.state) = {
+  option (rbt.v1alpha1.state) = {
   };
   int32 count = 1;
 }

@@ -1,5 +1,5 @@
 {
-  "name": "resemble-counter",
+  "name": "reboot-counter",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -7,11 +7,11 @@
     "dev:web": "cd web && vite --port 3000",
     "build:web": "cd web && vite build",
     "preview:web": "cd web && vite preview",
-    "dev:backend": "npx rsm dev run"
+    "dev:backend": "rbt dev run"
   },
   "dependencies": {
-    "@reboot-dev/resemble": "0.13.2",
-    "@reboot-dev/resemble-react": "0.13.2",
+    "@reboot-dev/reboot": "0.15.0",
+    "@reboot-dev/reboot-react": "0.15.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

@@ -1,4 +1,4 @@
-# Resemble Counter
+# Reboot Counter
 
 For the impatient:
 1. Prepare an environment by either:
@@ -10,12 +10,12 @@ For the impatient:
 
 A very simple (but still reactive and transactional!) counter.
 
-The [Resemble '.proto' definition](https://docs.reboot.dev/develop/schema#code-generation)
+The [Reboot '.proto' definition](https://docs.reboot.dev/develop/schema#code-generation)
 can be found in the `api/` directory, grouped into
 subdirectories by proto package, while backend specific code can be
 found in `backend/` and front end specific code in `web/`.
 
-_For more information on all of the Resemble examples, please [see the docs](https://docs.reboot.dev/get_started/examples)._
+_For more information on all of the Reboot examples, please [see the docs](https://docs.reboot.dev/get_started/examples)._
 
 ## Prepare an environment by...
 
@@ -27,7 +27,7 @@ This method requires running [VSCode](https://code.visualstudio.com/) on your ma
 This repository includes a [Dev Container config](./.devcontainer/devcontainer.json) (more about [Dev Containers](https://containers.dev/)) that declares all of the dependencies that you need to build and run the example. Dev Containers can be started locally with VSCode, but we recommend using GitHub's [Codespaces](https://github.com/features/codespaces) to quickly launch the Dev Container:
 
 1. Right-click to create a Codespace in a new tab or window:
-    * [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/reboot-dev/resemble-counter)
+    * [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/reboot-dev/reboot-counter)
     * *Important*: In order to view the example's front end, you must connect your local VSCode to the codespace: you cannot use VSCode in a browser window.
 2. Go to [https://github.com/codespaces](https://github.com/codespaces) and click the three dots next to the codespace you just created and then click `Open in Visual Studio Code`.
     * You can [set your default editor to VSCode for codespaces](https://docs.github.com/en/codespaces/customizing-your-codespace/setting-your-default-editor-for-github-codespaces) to avoid this step in the future. See [these instructions](https://docs.github.com/en/codespaces/developing-in-codespaces/opening-an-existing-codespace?tool=vscode) for more information.
@@ -65,14 +65,14 @@ npm install
 
 #### Run the backend
 
-Then, to run the application, you can use the Resemble CLI `rsm`:
+Then, to run the application, you can use the Reboot CLI `rbt`:
 ```shell
-npx rsm dev run
+npx rbt dev run
 ```
 
-Running `rsm dev run` will watch for file modifications and restart the
-application if necessary. See the `.rsmrc` file for flags and
-arguments that get expanded when running `rsm dev run`.
+Running `rbt dev run` will watch for file modifications and restart the
+application if necessary. See the `.rbtrc` file for flags and
+arguments that get expanded when running `rbt dev run`.
 
 ### Front end
 

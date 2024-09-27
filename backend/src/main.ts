@@ -1,5 +1,5 @@
-import { Application } from "@reboot-dev/resemble";
-import { Counter } from "../../api/counter/v1/counter_rsm.js";
+import { Application } from "@reboot-dev/reboot";
+import { Counter } from "../../api/counter/v1/counter_rbt.js";
 import { COUNTER_IDS } from "../../constants.js";
 import { CounterServicer } from "./counter_servicer.js";
 
