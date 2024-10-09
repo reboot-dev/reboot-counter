@@ -6,4 +6,4 @@ dev run --name=counter
 dev run --watch=constants.ts --watch=backend/**/*.ts
 dev run --tsc='npx tsc'
 dev run --nodejs
-dev run dist/backend/src/main.js
+dev run --application=dist/backend/src/main.js
