@@ -1,3 +1,4 @@
+/.rbt/
 api/**/*.ts
 api/dist/
 web/lib/api/**/*.ts

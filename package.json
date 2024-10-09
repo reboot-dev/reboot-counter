@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev:web-vite": "cd web-vite && vite --port 3000",
+    "dev:web": "cd web-vite && vite --port 3000",
     "dev:web-next": "next dev ./web-next",
     "dev:backend": "npx rbt dev run"
   },
