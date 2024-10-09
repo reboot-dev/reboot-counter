@@ -1,5 +1,5 @@
-import { COUNTER_IDS } from "../../constants";
-import TakeableCounter from "./TakableCounter";
+import { COUNTER_IDS } from "../../constants.js";
+import TakeableCounter from "./TakeableCounter.js";
 
 function App() {
   return (

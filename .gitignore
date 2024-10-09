@@ -4,3 +4,4 @@ web/lib/api/**/*.ts
 web/lib/api/**/*.d.ts
 web/lib/api/**/*.js
 dist/
+node_modules/

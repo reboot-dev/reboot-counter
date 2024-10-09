@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { COUNTER_IDS } from "../../constants";
-import { useCounter } from "./api/counter/v1/counter_rbt_react";
+import { COUNTER_IDS } from "../../constants.js";
+import { useCounter } from "../../web/src/api/counter/v1/counter_rbt_react.js";
 
 const TakeableCounter: FC<{ id: string }> = ({ id }) => {
   const { useCount, increment, take } = useCounter({ id });
