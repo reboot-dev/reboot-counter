@@ -40,7 +40,7 @@ Now you're ready to [run the application](#run-the-application)!
 Running directly on a host requires:
 
 - A platform of either:
-   - `x86_64 Linux` with `glibc>=2.35` (Ubuntu Jammy and other equivalent-generation Linux distributions)
+   - `x86_64 Linux` with `glibc>=2.31` (Ubuntu Focal and other equivalent-generation Linux distributions)
    - `arm64 or x86_64 MacOS` with `MacOS>=13.0` and `Xcode>=14.3`
 - Node.js
     - Including `npm`.
@@ -82,4 +82,4 @@ npm run dev:web
 ```
 
 If using VSCode, the page will load automatically.
-If not using VSCode, visit [http://127.0.0.1:3000](http://127.0.0.1:3000)`.
+If not using VSCode, visit [http://127.0.0.1:3000](http://127.0.0.1:3000).
