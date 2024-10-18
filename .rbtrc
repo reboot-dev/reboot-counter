@@ -4,6 +4,6 @@ protoc --react=web/src/api
 
 dev run --name=counter
 dev run --watch=constants.ts --watch=backend/**/*.ts
-dev run --tsc='npx tsc'
+dev run --transpile='npx tsc'
 dev run --nodejs
 dev run --application=dist/backend/src/main.js
