@@ -5,7 +5,7 @@ package counter.v1;
 import "google/protobuf/empty.proto";
 import "rbt/v1alpha1/options.proto";
 
-service CounterInterface {
+service CounterMethods {
   rpc Increment(google.protobuf.Empty) returns (google.protobuf.Empty) {
     option (rbt.v1alpha1.method).writer = {
     };

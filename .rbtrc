@@ -1,6 +1,6 @@
 protoc api/
 protoc --nodejs=api
-protoc --react=web/src/api
+protoc --react=api
 
 dev run --name=counter
 dev run --watch=constants.ts --watch=backend/**/*.ts
