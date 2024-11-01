@@ -11,7 +11,7 @@ import {
   TakeResponse,
 } from "../../api/counter/v1/counter_rbt.js";
 
-export class CounterServicer extends Counter.Interface {
+export class CounterServicer extends Counter.Servicer {
   constructor() {
     super();
   }
