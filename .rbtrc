@@ -4,6 +4,7 @@ protoc --react=api
 
 dev run --name=counter
 dev run --watch=constants.ts --watch=backend/**/*.ts
-dev run --transpile='npx tsc'
+dev run --transpile='node ./esbuild.config.js'
 dev run --nodejs
+
 dev run --application=dist/backend/src/main.js
