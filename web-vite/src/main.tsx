@@ -3,12 +3,20 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 
-const client = new RebootClient("https://dev.localhost.direct:9991");
+function root() {
+  if (import.meta.env.VITE_PUBLIC_ENDPOINT === undefined) {
+    return <>Please set 'VITE_PUBLIC_ENDPOINT' in the '.env' file</>;
+  }
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <RebootClientProvider client={client}>
-      <App />
-    </RebootClientProvider>
-  </React.StrictMode>
-);
+  const client = new RebootClient(import.meta.env.VITE_PUBLIC_ENDPOINT);
+
+  return (
+    <React.StrictMode>
+      <RebootClientProvider client={client}>
+        <App />
+      </RebootClientProvider>
+    </React.StrictMode>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")!).render(root());

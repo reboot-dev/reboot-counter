@@ -6,7 +6,7 @@ import TakeableCounter from "./TakeableCounter.js";
 export default async function Home() {
   const context = new ExternalContext({
     name: "react server context",
-    gateway: process.env.NEXT_PUBLIC_ENDPOINT,
+    url: process.env.NEXT_PUBLIC_ENDPOINT,
   });
 
   const counts = await Promise.all(
