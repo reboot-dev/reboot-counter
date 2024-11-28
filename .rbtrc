@@ -2,9 +2,14 @@ protoc api/
 protoc --nodejs=api
 protoc --react=api
 
+# Set the name of our application.
 dev run --name=counter
+
+# Watch any files that we will be editing.
 dev run --watch=constants.ts --watch=backend/**/*.ts
-dev run --transpile='node ./esbuild.config.js'
+
+# Declare that this is a nodejs application.
 dev run --nodejs
 
-dev run --application=dist/backend/src/main.js
+# And specify where our application entrypoint is.
+dev run --application=backend/src/main.ts

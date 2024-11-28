@@ -1,7 +1,7 @@
 import { ExternalContext } from "@reboot-dev/reboot";
-import { Counter } from "../../api/counter/v1/counter_rbt.js";
-import { COUNTER_IDS } from "../../constants.js";
-import TakeableCounter from "./TakeableCounter.js";
+import { Counter } from "../../api/counter/v1/counter_rbt";
+import { COUNTER_IDS } from "../../constants";
+import TakeableCounter from "./TakeableCounter";
 
 export default async function Home() {
   const context = new ExternalContext({
