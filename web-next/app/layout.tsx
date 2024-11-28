@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import RebootContext from "./RebootContext.js";
+import RebootContext from "./RebootContext";
 
 export const metadata: Metadata = {
   title: "Reboot Counter",
