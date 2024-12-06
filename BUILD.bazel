@@ -11,14 +11,11 @@ filegroup(
             # Files that may be created by activity in this directory, such
             # as manually following the steps of the `README.md` file, but which
             # are not part of the "source code" of this repository.
-            ".venv/**/*",
-            ".pytest_cache/**/*",
-            "api/gen/**/*.js",
-            "web/node_modules/**/*",
-            "web/dist/**/*",
-            "web/src/gen/**/*.js",
-            "web/src/gen/**/*.ts",
-            "web/package-lock.json",
+            ".rbt/**/*",
+            ".next/**/*",
+            "api/**/*.ts",
+            "node_modules/**/*",
+            "web/lib/api/**/*.ts",
         ],
     ),
     visibility = ["//visibility:public"],
