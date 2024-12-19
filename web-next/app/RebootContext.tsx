@@ -1,17 +1,15 @@
 "use client";
 
-import { RebootClient, RebootClientProvider } from "@reboot-dev/reboot-react";
+import { RebootClientProvider } from "@reboot-dev/reboot-react";
 import { ReactNode } from "react";
 
 export default function RebootContext({ children }: { children: ReactNode }) {
-  if (process.env.NEXT_PUBLIC_ENDPOINT === undefined) {
-    return <>Please set 'NEXT_PUBLIC_ENDPOINT' in the '.env' file</>;
-  }
-
-  const client = new RebootClient(process.env.NEXT_PUBLIC_ENDPOINT);
+  const url = process.env.NEXT_PUBLIC_ENDPOINT
+    ? `https://${process.env.NEXT_PUBLIC_ENDPOINT}`
+    : "http://localhost:9991";
 
   return (
-    <RebootClientProvider client={client}>
+    <RebootClientProvider url={url}>
       <>{children}</>
     </RebootClientProvider>
   );
