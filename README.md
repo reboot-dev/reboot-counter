@@ -10,7 +10,7 @@ For the impatient:
 
 A very simple (but still reactive and transactional!) counter.
 
-The [Reboot '.proto' definition](https://docs.reboot.dev/develop/schema#code-generation)
+The [Reboot '.proto' definitions](https://docs.reboot.dev/develop/schema#code-generation)
 can be found in the `api/` directory, grouped into
 subdirectories by proto package, while backend specific code can be
 found in `backend/` and front end specific code in `web/`.

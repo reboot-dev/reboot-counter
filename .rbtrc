@@ -5,9 +5,6 @@ protoc --react=api
 # Set the name of our application.
 dev run --name=counter
 
-# Watch any files that we will be editing.
-dev run --watch=constants.ts --watch=backend/**/*.ts
-
 # Declare that this is a nodejs application.
 dev run --nodejs
 
