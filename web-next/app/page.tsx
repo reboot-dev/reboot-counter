@@ -10,7 +10,7 @@ export default async function Home() {
   });
 
   const counts = await Promise.all(
-    COUNTER_IDS.map(async (id: string) => Counter.lookup(id).count(context))
+    COUNTER_IDS.map(async (id: string) => Counter.ref(id).count(context))
   );
 
   return COUNTER_IDS.map((id, index) => (
