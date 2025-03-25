@@ -4,12 +4,11 @@ import { COUNTER_IDS } from "../../constants.js";
 import { CounterServicer } from "./counter_servicer.js";
 
 const initialize = async (context) => {
-  COUNTER_IDS.map(
-    async (counterId: string) =>
-      await Counter.construct({ id: counterId })
-        .idempotently()
-        .increment(context)
-  );
+  COUNTER_IDS.map(async (counterId: string) => {
+    // Perform an increment to ensure that the counter has been
+    // implicitly constructed.
+    await Counter.ref(counterId).idempotently().increment(context);
+  });
 };
 
 new Application({

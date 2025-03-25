@@ -41,9 +41,7 @@ export class CounterServicer extends Counter.Servicer {
     if (request.takerId === context.stateId) {
       state.count = (
         await Promise.all(
-          request.takenIds.map((takenId) =>
-            Counter.lookup(takenId).take(context)
-          )
+          request.takenIds.map((takenId) => Counter.ref(takenId).take(context))
         )
       ).reduce(
         (count, { takeAmount }: TakeResponse) => (count += takeAmount),
