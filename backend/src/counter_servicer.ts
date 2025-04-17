@@ -3,6 +3,7 @@ import {
   ReaderContext,
   TransactionContext,
   WriterContext,
+  allow,
 } from "@reboot-dev/reboot";
 import { Counter as CounterMessage } from "../../api/counter/v1/counter_pb.js";
 import {
@@ -12,8 +13,8 @@ import {
 } from "../../api/counter/v1/counter_rbt.js";
 
 export class CounterServicer extends Counter.Servicer {
-  constructor() {
-    super();
+  authorizer() {
+    return allow();
   }
 
   async increment(
