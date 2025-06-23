@@ -10,8 +10,8 @@
     "dev:backend": "rbt dev run"
   },
   "dependencies": {
-    "@reboot-dev/reboot": "0.27.1",
-    "@reboot-dev/reboot-react": "0.27.1",
+    "@reboot-dev/reboot": "0.28.0",
+    "@reboot-dev/reboot-react": "0.28.0",
     "next": "14.2.13",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
