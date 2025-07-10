@@ -1,6 +1,6 @@
-protoc api/
-protoc --nodejs=api
-protoc --react=api
+generate api/
+generate --nodejs=api
+generate --react=api
 
 # Set the name of our application.
 dev run --name=counter
