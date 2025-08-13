@@ -19,39 +19,36 @@ export class CounterServicer extends Counter.Servicer {
 
   async increment(
     context: WriterContext,
-    state: Counter.State,
     request: Empty
   ): Promise<PartialMessage<Empty>> {
-    state.count++;
+    this.state.count++;
     return {};
   }
 
   async count(
     context: ReaderContext,
-    state: Counter.State,
     request: Empty
   ): Promise<PartialMessage<CounterMessage>> {
-    return { count: state.count };
+    return { count: this.state.count };
   }
 
   async take(
     context: TransactionContext,
-    state: Counter.State,
     request: TakeRequest
   ): Promise<PartialMessage<TakeResponse>> {
     if (request.takerId === context.stateId) {
-      state.count = (
+      this.state.count = (
         await Promise.all(
           request.takenIds.map((takenId) => Counter.ref(takenId).take(context))
         )
       ).reduce(
         (count, { takeAmount }: TakeResponse) => (count += takeAmount),
-        state.count
+        this.state.count
       );
-      return { takeAmount: state.count };
+      return { takeAmount: this.state.count };
     } else {
-      const takeAmount = state.count;
-      state.count = 0;
+      const takeAmount = this.state.count;
+      this.state.count = 0;
       return { takeAmount };
     }
   }

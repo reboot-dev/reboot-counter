@@ -7,7 +7,7 @@ const initialize = async (context) => {
   COUNTER_IDS.map(async (counterId: string) => {
     // Perform an increment to ensure that the counter has been
     // implicitly constructed.
-    await Counter.ref(counterId).idempotently().increment(context);
+    await Counter.ref(counterId).increment(context);
   });
 };
 
